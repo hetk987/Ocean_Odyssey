@@ -30,39 +30,15 @@ jobs:
       - name: Compile Java files
         run: |
           echo "Starting compilation..."
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            javac -d bin -cp "src" src\main\MainClass.java src\main\Game.java src\main\GamePanel.java src\main\GameWindow.java src\main\MenuFrame.java src\main\Settings.java src\Entities\*.java src\gamestates\*.java src\inputs\*.java src\Levels\*.java src\Physics\*.java src\utilz\*.java
-          else
-            javac -d bin -cp "src" src/main/MainClass.java src/main/Game.java src/main/GamePanel.java src/main/GameWindow.java src/main/MenuFrame.java src/main/Settings.java src/Entities/*.java src/gamestates/*.java src/inputs/*.java src/Levels/*.java src/Physics/*.java src/utilz/*.java
-          fi
+          if [ "$RUNNER_OS" = "Windows" ]; then javac -d bin -cp "src" src\main\MainClass.java src\main\Game.java src\main\GamePanel.java src\main\GameWindow.java src\main\MenuFrame.java src\main\Settings.java src\Entities\*.java src\gamestates\*.java src\inputs\*.java src\Levels\*.java src\Physics\*.java src\utilz\*.java; else javac -d bin -cp "src" src/main/MainClass.java src/main/Game.java src/main/GamePanel.java src/main/GameWindow.java src/main/MenuFrame.java src/main/Settings.java src/Entities/*.java src/gamestates/*.java src/inputs/*.java src/Levels/*.java src/Physics/*.java src/utilz/*.java; fi
           echo "Compilation command completed with exit code: $?"
 
       - name: Verify compilation
         run: |
           echo "Checking for compiled class files..."
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            ls -la bin\main\
-            if [ -f "bin\main\MainClass.class" ]; then
-              echo "✅ Compilation successful! MainClass.class found."
-            else
-              echo "❌ Compilation failed! MainClass.class not found."
-              exit 1
-            fi
-          else
-            ls -la bin/main/
-            if [ -f "bin/main/MainClass.class" ]; then
-              echo "✅ Compilation successful! MainClass.class found."
-            else
-              echo "❌ Compilation failed! MainClass.class not found."
-              exit 1
-            fi
-          fi
+          if [ "$RUNNER_OS" = "Windows" ]; then ls -la bin\main\; if [ -f "bin\main\MainClass.class" ]; then echo "✅ Compilation successful! MainClass.class found."; else echo "❌ Compilation failed! MainClass.class not found."; exit 1; fi; else ls -la bin/main/; if [ -f "bin/main/MainClass.class" ]; then echo "✅ Compilation successful! MainClass.class found."; else echo "❌ Compilation failed! MainClass.class not found."; exit 1; fi; fi
 
       - name: Test game startup (headless)
         run: |
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            timeout 10s java -cp "bin;res" main.MainClass || true
-          else
-            timeout 10s java -cp "bin:res" main.MainClass || true
-          fi
+          if [ "$RUNNER_OS" = "Windows" ]; then timeout 10s java -cp "bin;res" main.MainClass || true; else timeout 10s java -cp "bin:res" main.MainClass || true; fi
         continue-on-error: true
