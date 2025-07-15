@@ -1,13 +1,13 @@
 package Gamestates;
 
 import Utilz.LoadSave;
+import main.Game;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-
-import Main.Game;
 
 public class GameWin extends State implements Statemethods{
 

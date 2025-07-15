@@ -1,7 +1,7 @@
 package Gamestates;
 
 
-import Main.Game;
+import main.Game;
 
 public class State{
     protected Game game;

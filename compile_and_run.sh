@@ -9,7 +9,7 @@ mkdir -p bin
 
 # Compile all Java files
 echo "📦 Compiling Java files..."
-javac -d bin -cp "src" src/Main/MainClass.java src/Main/Game.java src/Main/GamePanel.java src/Main/GameWindow.java src/Main/MenuFrame.java src/Main/Settings.java src/Entities/*.java src/Gamestates/*.java src/Inputs/*.java src/Levels/*.java src/Physics/*.java src/Utilz/*.java
+javac -d bin -cp "src" src/main/MainClass.java src/main/Game.java src/main/GamePanel.java src/main/GameWindow.java src/main/MenuFrame.java src/main/Settings.java src/Entities/*.java src/Gamestates/*.java src/Inputs/*.java src/Levels/*.java src/Physics/*.java src/Utilz/*.java
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
@@ -17,7 +17,7 @@ if [ $? -eq 0 ]; then
     echo "🎮 Starting Ocean Odyssey..."
     
     # Run the game
-    java -cp "bin:res" Main.MainClass
+    java -cp "bin:res" main.MainClass
 else
     echo "❌ Compilation failed!"
     exit 1

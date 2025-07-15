@@ -1,8 +1,10 @@
-package Main;
+package main;
 
 import Inputs.KeyBoardInputs;
-import static Main.Game.GAME_HEIGHT;
-import static Main.Game.GAME_WIDTH;
+
+import static main.Game.GAME_HEIGHT;
+import static main.Game.GAME_WIDTH;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;

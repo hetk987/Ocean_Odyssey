@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-import Main.Game;
+import main.Game;
 
 public class Menu extends State implements Statemethods{
 

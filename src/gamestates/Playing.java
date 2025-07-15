@@ -13,8 +13,8 @@ import Entities.MonitoringVillian;
 import Entities.Player;
 import Entities.Surroundings;
 import Levels.LevelManager;
-import Main.Game;
 import Physics.Collisions;
+import main.Game;
 
 
 public class Playing extends State implements Statemethods{
