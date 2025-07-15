@@ -24,7 +24,7 @@ This was one of my first looks into programming. Here we made a very simple plat
 
 ### Prerequisites
 
-- Java 8 or higher
+- Java 11 or higher (recommended: Java 17)
 - Git
 
 ### Installation & Running
