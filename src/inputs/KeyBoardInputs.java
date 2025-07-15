@@ -1,9 +1,8 @@
 package inputs;
 
+import gamestates.Gamestate;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
-import gamestates.Gamestate;
 import main.GamePanel;
 
 

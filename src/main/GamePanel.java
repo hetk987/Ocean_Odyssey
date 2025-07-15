@@ -1,24 +1,14 @@
 package main;
 
-import javax.swing.AbstractButton;
-import javax.swing.ButtonModel;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.plaf.basic.BasicButtonUI;
-
+import inputs.KeyBoardInputs;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.Shape;
-import java.awt.geom.RoundRectangle2D;
-
-import static main.Game.GAME_WIDTH;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 import static main.Game.GAME_HEIGHT;
-import inputs.KeyBoardInputs;
+import static main.Game.GAME_WIDTH;
 
 public class GamePanel extends JPanel{
 
@@ -79,35 +69,4 @@ public class GamePanel extends JPanel{
 
 
 
-// Custom ButtonUI implementation to create shaped buttons
-class ShapedButtonUI extends BasicButtonUI {
-    @Override
-    protected void installDefaults(AbstractButton button) {
-        super.installDefaults(button);
-        button.setContentAreaFilled(false);
-        button.setBorderPainted(false);
-        button.setFocusPainted(false);
-        button.setOpaque(false);
-    }
 
-    @Override
-    public void paint(Graphics g, JComponent c) {
-        AbstractButton button = (AbstractButton) c;
-        ButtonModel model = button.getModel();
-        Graphics2D g2 = (Graphics2D) g.create();
-
-        if (model.isPressed()) {
-            g2.setColor(button.getBackground().darker());
-        } else {
-            g2.setColor(button.getBackground());
-        }
-
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-        Shape shape = new RoundRectangle2D.Double(0, 0, button.getWidth(), button.getHeight(), 20, 20);
-        g2.fill(shape);
-
-        g2.dispose();
-        super.paint(g, c);
-    }
-}
