@@ -1,14 +1,16 @@
-package main;
+package Main;
 
-import inputs.KeyBoardInputs;
+import Inputs.KeyBoardInputs;
+
+import static Main.Game.GAME_HEIGHT;
+import static Main.Game.GAME_WIDTH;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import static main.Game.GAME_HEIGHT;
-import static main.Game.GAME_WIDTH;
 
 public class GamePanel extends JPanel{
 

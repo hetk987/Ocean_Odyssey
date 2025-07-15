@@ -8,7 +8,7 @@ if not exist "bin" mkdir bin
 
 REM Compile all Java files
 echo 📦 Compiling Java files...
-javac -d bin -cp "src" src\main\MainClass.java src\main\Game.java src\main\GamePanel.java src\main\GameWindow.java src\main\MenuFrame.java src\main\Settings.java src\Entities\*.java src\gamestates\*.java src\inputs\*.java src\Levels\*.java src\Physics\*.java src\utilz\*.java
+javac -d bin -cp "src" src\Main\MainClass.java src\Main\Game.java src\Main\GamePanel.java src\Main\GameWindow.java src\Main\MenuFrame.java src\Main\Settings.java src\Entities\*.java src\Gamestates\*.java src\Inputs\*.java src\Levels\*.java src\Physics\*.java src\Utilz\*.java
 
 REM Check if compilation was successful
 if %ERRORLEVEL% EQU 0 (
@@ -16,7 +16,7 @@ if %ERRORLEVEL% EQU 0 (
     echo 🎮 Starting Ocean Odyssey...
     
     REM Run the game
-    java -cp "bin;res" main.MainClass
+    java -cp "bin;res" Main.MainClass
 ) else (
     echo ❌ Compilation failed!
     pause

@@ -1,16 +1,16 @@
 package Entities;
 
+import static Utilz.Constants.Directions.*;
+import static Utilz.Constants.PlayerConstants.*;
+
 import java.awt.Rectangle;
 import Physics.*;
-import utilz.Constants.PlayerConstants;
+import Utilz.Constants.PlayerConstants;
 
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-
-import static utilz.Constants.PlayerConstants.*;
-import static utilz.Constants.Directions.*;
 
 public class Player implements Entity{
     private int xPosition, yPosition;

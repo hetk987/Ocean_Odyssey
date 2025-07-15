@@ -2,7 +2,7 @@ package Levels;
 
 import java.awt.Graphics;
 
-import utilz.LoadSave;
+import Utilz.LoadSave;
 
 public class LevelManager {
     

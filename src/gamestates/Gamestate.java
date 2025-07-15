@@ -1,4 +1,4 @@
-package gamestates;
+package Gamestates;
 
 public enum Gamestate{
     PLAYING, MENU, GAMEOVER, GAMEWIN, PAUSE;

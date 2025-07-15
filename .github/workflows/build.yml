@@ -1,0 +1,47 @@
+name: Build and Test Ocean Odyssey
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        java-version: [8, 11, 17]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: "temurin"
+          cache: maven
+
+      - name: Create bin directory
+        run: mkdir -p bin
+
+      - name: Compile Java files
+        run: |
+          javac -d bin -cp "src" src/main/MainClass.java src/main/Game.java src/main/GamePanel.java src/main/GameWindow.java src/main/MenuFrame.java src/main/Settings.java src/Entities/*.java src/gamestates/*.java src/inputs/*.java src/Levels/*.java src/Physics/*.java src/utilz/*.java
+
+      - name: Verify compilation
+        run: |
+          if [ -f "bin/main/MainClass.class" ]; then
+            echo "✅ Compilation successful!"
+          else
+            echo "❌ Compilation failed!"
+            exit 1
+          fi
+
+      - name: Test game startup (headless)
+        run: |
+          timeout 10s java -cp "bin:res" main.MainClass || true
+        continue-on-error: true

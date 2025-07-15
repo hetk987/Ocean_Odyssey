@@ -1,14 +1,14 @@
-package main;
+package Main;
 
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import gamestates.Gamestate;
-import gamestates.Menu;
-import gamestates.Playing;
-import gamestates.GameOver;
-import gamestates.GameWin;
+import Gamestates.GameOver;
+import Gamestates.GameWin;
+import Gamestates.Gamestate;
+import Gamestates.Menu;
+import Gamestates.Playing;
 
 public class Game implements Runnable{
 

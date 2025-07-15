@@ -1,11 +1,10 @@
-package gamestates;
+package Gamestates;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-
-import main.Game;
+import Main.Game;
 
 public class Menu extends State implements Statemethods{
 

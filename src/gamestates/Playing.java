@@ -1,4 +1,6 @@
-package gamestates;
+package Gamestates;
+
+import static Utilz.Constants.Directions.*;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -11,9 +13,8 @@ import Entities.MonitoringVillian;
 import Entities.Player;
 import Entities.Surroundings;
 import Levels.LevelManager;
+import Main.Game;
 import Physics.Collisions;
-import main.Game;
-import static utilz.Constants.Directions.*;
 
 
 public class Playing extends State implements Statemethods{
