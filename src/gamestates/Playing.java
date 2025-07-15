@@ -69,7 +69,7 @@ public class Playing extends State implements Statemethods{
     public void draw(Graphics g) {
         
         drawPlatforms(g);//draws in the level
-        updateSurroundings(g);//draws in the hitboxes of the platforms IF NECESARY
+        // updateSurroundings(g);//draws in the hitboxes of the platforms IF NECESARY
         updateEntities(g);//draws in the villain and player
     }
 
@@ -176,12 +176,12 @@ public class Playing extends State implements Statemethods{
         for(Entity currentEntity: entitiesList){ //loop through each entity
             if(currentEntity instanceof Player){ //if its a player
                 currentEntity.setAnimation();
-                g.drawRect(currentEntity.getHitBox().x, currentEntity.getHitBox().y, currentEntity.getHitBox().width, currentEntity.getHitBox().height); //draw hit box
+                // g.drawRect(currentEntity.getHitBox().x, currentEntity.getHitBox().y, currentEntity.getHitBox().width, currentEntity.getHitBox().height); //draw hit box
                 g.drawImage(currentEntity.getAnimation(), currentEntity.getXPosition(), currentEntity.getYPosition(), 75, 75, null); //draw player
             }
             else if(currentEntity instanceof MonitoringVillian){
                 currentEntity.setAnimation();
-                g.drawRect(currentEntity.getHitBox().x, currentEntity.getHitBox().y, currentEntity.getHitBox().width, currentEntity.getHitBox().height); //draw hit box
+                // g.drawRect(currentEntity.getHitBox().x, currentEntity.getHitBox().y, currentEntity.getHitBox().width, currentEntity.getHitBox().height); //draw hit box
                 g.drawImage(currentEntity.getAnimation(), currentEntity.getXPosition(), currentEntity.getYPosition(), 70, 70, null); //draw villain
                 ((MonitoringVillian) currentEntity).updateEntity();//basically updates hitbox
             }
@@ -196,7 +196,7 @@ public class Playing extends State implements Statemethods{
         //  g.drawRect(surroundings3.getRectangle().x, surroundings3.getRectangle().y, surroundings3.getRectangle().width, surroundings3.getRectangle().height);
         //  g.drawRect(surroundings4.getRectangle().x, surroundings4.getRectangle().y, surroundings4.getRectangle().width, surroundings4.getRectangle().height);
         //  g.drawRect(surroundings5.getRectangle().x, surroundings5.getRectangle().y, surroundings5.getRectangle().width, surroundings5.getRectangle().height);
-        g.drawRect(anchor.getRectangle().x, anchor.getRectangle().y, anchor.getRectangle().width, anchor.getRectangle().height);
+        //  g.drawRect(anchor.getRectangle().x, anchor.getRectangle().y, anchor.getRectangle().width, anchor.getRectangle().height);
     }
 
     public void drawPlatforms(Graphics g){

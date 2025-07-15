@@ -1,19 +1,14 @@
 package Entities;
 
+import Physics.*;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-
-import Physics.*;
 
 
 public class Surroundings implements Entity{
 
     private BufferedImage img;
     public Rectangle hitBox;
-    public Rectangle hitBox1;
-    public Rectangle hitBox2;
-    public Rectangle hitBox3;
-    public Rectangle hitBox4;
     public Collisions colliderCheck;
     public int xPosition = 0;
     public int yPosition = 400;

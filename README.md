@@ -1,9 +1,8 @@
 # 🌊 Ocean Odyssey - Underwater Platformer
 
-This was one of my first looks into programming. Here we made a very simple platformer game  made entirely in java uning Java Swing. It contains the key componenets like a player, a monitoring enemy, platforms (ofc), and and end goal of reaching the anchor. It's nothing fancy but we had a blast making it. We got to learn about sprite animation, game physics and a lot more. My favorite part was that I got to draw the ocean character and all his different frames. 
+This was one of my first looks into programming. Here we made a very simple platformer game made entirely in java uning Java Swing. It contains the key componenets like a player, a monitoring enemy, platforms (ofc), and and end goal of reaching the anchor. It's nothing fancy but we had a blast making it. We got to learn about sprite animation, game physics and a lot more. My favorite part was that I got to draw the ocean character and all his different frames.
 
 ![Ocean Odyssey Gameplay](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-
 
 ## 🎮 Game Features
 
@@ -62,10 +61,10 @@ This was one of my first looks into programming. Here we made a very simple plat
 ```
 Ocean_Odyssey/
 ├── res/                      # Game assets (images, sprites)
-│   ├── background.png        
-│   ├── diverSpriteAtlas.png  
-│   ├── enemySpriteAtlas.png  
-│   ├── platformAtlas.png     
+│   ├── background.png
+│   ├── diverSpriteAtlas.png
+│   ├── enemySpriteAtlas.png
+│   ├── platformAtlas.png
 │   └── ...
 ├── src/
 │   ├── Entities/             # Game objects (Player, Enemy, Anchor, Platforms)
@@ -118,11 +117,9 @@ The game includes a settings menu where you can adjust:
 
 ## 📸 Screenshots
 
-_[Add screenshots of your game here - you can take screenshots while playing and add them to this section]_
-
-## 🎥 Demo Video
-
-_[You can record a short gameplay video and upload it to YouTube, then embed it here]_
+![Start Screen](./res/startScreen.png)
+![Game Screen](./res/gameScreen.png)
+![Setting Screen](./res/settingScreen.png)
 
 ## 🤝 Contributing
 
